@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+
+    <!--Tailwind CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="p-5 md:p-20 flex justify-center">
+    <div class="p-5 bg-gray-200 rounded-lg shadow-lg w-full max-w-lg">
+
+        <!--Top Name-->
+        <div class="flex justify-center">
+            <h1 class="text-green-400 font-bold text-lg text-center">Student Registration Form</h1>
+        </div>
+
+        <!--Input Boxes-->
+        <div id="one" class="pt-5 font-bold">
+            <label for="name">Name: </label>
+            <input id="name" type="text" class="block w-full px-4 py-2 border border-gray-400 rounded-md" placeholder="Enter your name" required>
+
+            <label for="age">Age: </label>
+            <input id="age" type="number" class="block w-full px-4 py-2 border border-gray-400 rounded-md" placeholder="Enter your age" required>
+
+            <label for="gender">Gender: </label>
+            <select id="gender" class="cursor-pointer block w-full px-4 py-2 border border-gray-400 rounded-md">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <label for="course">Course: </label>
+            <select id="course" class="cursor-pointer block w-full px-4 py-2 border border-gray-400 rounded-md">
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+                <option value="c">C, C++ Programs</option>
+            </select>
+
+            <label for="email">Email: </label>
+            <input id="email" type="email" class="block w-full px-4 py-2 border border-gray-400 rounded-md" placeholder="Enter your valid email" required>
+        </div>
+
+        <!--Submit Button-->
+        <div class="flex justify-center mt-4">
+            <button id="btn" class="bg-blue-500 p-2 text-white font-bold rounded-md hover:bg-blue-600">Submit</button>
+        </div>
+
+        <!--Footer-->
+        <div class="flex justify-center mt-4">
+            <h2 class="text-green-400 font-bold text-xl">Registered Students</h2>
+        </div>
+
+        <!--Registered Students Table-->
+        <div class="overflow-x-auto mt-5">
+            <table class="w-full border-collapse border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="border border-gray-300 px-4 py-2 text-left">Name</th>
+                        <th class="border border-gray-300 px-4 py-2 text-left">Age</th>
+                        <th class="border border-gray-300 px-4 py-2 text-left">Gender</th>
+                        <th class="border border-gray-300 px-4 py-2 text-left">Course</th>
+                        <th class="border border-gray-300 px-4 py-2 text-left">Email</th>
+                    </tr>
+                </thead>
+                <tbody id="dataGoes">
+                    <!-- Data will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
